@@ -13,7 +13,5 @@ function App() {
   );
 }
 
-function About(){
-  <p> Hi There!</p>
-}
+
 export default App;

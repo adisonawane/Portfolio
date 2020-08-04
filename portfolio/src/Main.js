@@ -7,7 +7,11 @@ import { Container } from '@material-ui/core';
 import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
-
+import Intro from "./Intro"
+import Skills from "./Skills"
+import Projects from "./Projects"
+import Contact from "./Contact"
+import About from "./About"
 const useStyles = theme => ({
     root: {
         flexGrow: 1,
@@ -133,11 +137,11 @@ class Main extends Component {
                     </Tabs>
                 </AppBar>
                 <Container className={classes.container}>
-                    <Container className={classes.containerSpacing} ref={this.intro}><div>Intro</div></Container>
-                    <Container className={classes.containerSpacing} ref={this.skills}><div>skills</div></Container>
-                    <Container className={classes.containerSpacing} ref={this.projects}><div>Projects</div></Container>
-                    <Container className={classes.containerSpacing} ref={this.contact}><div>Contact</div></Container>
-                    <Container className={classes.containerSpacing} ref={this.about}><div>About</div></Container>
+                    <Container className={classes.containerSpacing} ref={this.intro}><div><Intro/></div></Container>
+                    <Container className={classes.containerSpacing} ref={this.skills}><div><Skills/></div></Container>
+                    <Container className={classes.containerSpacing} ref={this.projects}><div><Projects/></div></Container>
+                    <Container className={classes.containerSpacing} ref={this.contact}><div><Contact/></div></Container>
+                    <Container className={classes.containerSpacing} ref={this.about}><div><About/></div></Container>
                 </Container>
 
 
