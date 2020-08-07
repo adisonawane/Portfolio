@@ -9,4 +9,3 @@ export default class Intro extends Component {
         )
     }
 }
-export default Intro
