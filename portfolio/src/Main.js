@@ -137,11 +137,11 @@ class Main extends Component {
                     </Tabs>
                 </AppBar>
                 <Container className={classes.container}>
-                    <Container className={classes.containerSpacing} ref={this.intro}><div><Intro/></div></Container>
-                    <Container className={classes.containerSpacing} ref={this.skills}><div><Skills/></div></Container>
-                    <Container className={classes.containerSpacing} ref={this.projects}><div><Projects/></div></Container>
-                    <Container className={classes.containerSpacing} ref={this.contact}><div><Contact/></div></Container>
-                    <Container className={classes.containerSpacing} ref={this.about}><div><About/></div></Container>
+                    <div ref={this.intro}><Intro/></div>
+                    <div ref={this.skills}><Skills /></div>
+                    <div ref={this.projects}><Projects/></div> 
+                    <div ref={this.contact}><Contact /></div>
+                    <div ref={this.about}><About/></div>
                 </Container>
 
 
