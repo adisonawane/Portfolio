@@ -26,16 +26,262 @@ const useStyles = skill => ({
         marginBottom:21
     },
 }) 
-export default class Skills extends Component {
+class Skills extends Component {
     constructor(props){
         super(props);
     }
     render() {
-        const {}
+        const {classes}=this.props
         return (
-            <div>
-                <h1>Python</h1>
+            <div className={classes.containerTabs}>
+                <Grid container direction="row"
+                        justify="center"
+                        alignItems="center" spacing={0} >
+                        <Grid item xs={4} >
+                        <Divider variant="middle" />
+                        </Grid>
+                        <Grid item xs={4} className={classes.skillsSection}>
+                        Front End Development
+                        </Grid>
+                        <Grid item xs={4} >
+                        <Divider variant="middle" />
+                        </Grid>
+
+                </Grid>
+
+                <Grid container direction="row"
+                        justify="center"
+                        alignItems="center" spacing={3} >
+                        <Grid item xs={6} className={classes.skillsLabel}>
+                            ReactJS
+                        </Grid>
+                        <Grid item xs={6} className={classes.skills}>
+                        <StarIcon fontSize="small"/>
+                        <StarIcon fontSize="small"/>
+                        <StarIcon fontSize="small"/>
+                        <StarIcon fontSize="small"/>
+                        <StarBorderIcon fontSize="small"/>
+                        </Grid>
+
+                    </Grid>
+                    <Grid container direction="row"
+                        justify="center"
+                        alignItems="center" spacing={3} >
+                        <Grid item xs={6} className={classes.skillsLabel}>
+                            HTML5, CSS
+                        </Grid>
+                        <Grid item xs={6} className={classes.skills}>
+                        <StarIcon fontSize="small"/>
+                        <StarIcon fontSize="small"/>
+                        <StarIcon fontSize="small"/>
+                        <StarIcon fontSize="small"/>
+                        <StarBorderIcon fontSize="small"/>
+                        </Grid>
+
+                    </Grid>
+                    <Grid container direction="row"
+                        justify="center"
+                        alignItems="center" spacing={3} >
+                        <Grid item xs={6} className={classes.skillsLabel}>
+                            ReactJS
+                        </Grid>
+                        <Grid item xs={6} className={classes.skills}>
+                        <StarIcon fontSize="small"/>
+                        <StarIcon fontSize="small"/>
+                        <StarIcon fontSize="small"/>
+                        <StarBorderIcon fontSize="small"/>
+                        <StarBorderIcon fontSize="small"/>
+                        </Grid>
+
+                    </Grid>
+                    
+                    <Grid container direction="row"
+                        justify="center"
+                        alignItems="center" spacing={3} >
+                        <Grid item xs={6} className={classes.skillsLabel}>
+                            Ionic Framework
+                        </Grid>
+                        <Grid item xs={6} className={classes.skills}>
+                        <StarIcon fontSize="small"/>
+                        <StarIcon fontSize="small"/>
+                        <StarIcon fontSize="small"/>
+                        <StarIcon fontSize="small"/>
+                        <StarBorderIcon fontSize="small"/>
+                        </Grid>
+
+                    </Grid>
+
+                    <Grid container direction="row"
+                        justify="center"
+                        alignItems="center" spacing={0} >
+                        <Grid item xs={4} >
+                        <Divider variant="middle" />
+                        </Grid>
+                        <Grid item xs={4} className={classes.skillsSection}>
+                        Back End Development
+                        </Grid>
+                        <Grid item xs={4} >
+                        <Divider variant="middle" />
+                        </Grid>
+
+                    </Grid>
+                    
+
+                    <Grid container direction="row"
+                        justify="center"
+                        alignItems="center" spacing={3} >
+                        <Grid item xs={6} className={classes.skillsLabel}>
+                            Firebase
+                        </Grid>
+                        <Grid item xs={6} className={classes.skills}>
+                        <StarIcon fontSize="small"/>
+                        <StarIcon fontSize="small"/>
+                        <StarIcon fontSize="small"/>
+                        <StarIcon fontSize="small"/>
+                        <StarBorderIcon fontSize="small"/>
+                        </Grid>
+
+                    </Grid>
+                    <Grid container direction="row"
+                        justify="center"
+                        alignItems="center" spacing={3} >
+                        <Grid item xs={6} className={classes.skillsLabel}>
+                            C# MVC
+                        </Grid>
+                        <Grid item xs={6} className={classes.skills}>
+                        <StarIcon fontSize="small"/>
+                        <StarIcon fontSize="small"/>
+                        <StarIcon fontSize="small"/>
+                        <StarIcon fontSize="small"/>
+                        <StarBorderIcon fontSize="small"/>
+                        </Grid>
+
+                    </Grid>
+                    <Grid container direction="row"
+                        justify="center"
+                        alignItems="center" spacing={3} >
+                        <Grid item xs={6} className={classes.skillsLabel}>
+                            SQL
+                        </Grid>
+                        <Grid item xs={6} className={classes.skills}>
+                        <StarIcon fontSize="small"/>
+                        <StarIcon fontSize="small"/>
+                        <StarIcon fontSize="small"/>
+                        <StarBorderIcon fontSize="small"/>
+                        <StarBorderIcon fontSize="small"/>
+                        </Grid>
+
+                    </Grid>
+
+                    <Grid container direction="row"
+                        justify="center"
+                        alignItems="center" spacing={0} >
+                        <Grid item xs={4} >
+                        <Divider variant="middle" />
+                        </Grid>
+                        <Grid item xs={4} className={classes.skillsSection}>
+                        Artificial Intelligence
+                        </Grid>
+                        <Grid item xs={4} >
+                        <Divider variant="middle" />
+                        </Grid>
+
+                    </Grid>
+
+                    <Grid container direction="row"
+                        justify="center"
+                        alignItems="center" spacing={3} >
+                        <Grid item xs={6} className={classes.skillsLabel}>
+                            Python for AI
+                        </Grid>
+                        <Grid item xs={6} className={classes.skills}>
+                        <StarIcon fontSize="small"/>
+                        <StarIcon fontSize="small"/>
+                        <StarIcon fontSize="small"/>
+                        <StarIcon fontSize="small"/>
+                        <StarIcon fontSize="small"/>
+                        </Grid>
+
+                    </Grid>
+                    <Grid container direction="row"
+                        justify="center"
+                        alignItems="center" spacing={3} >
+                        <Grid item xs={6} className={classes.skillsLabel}>
+                            Robot Operating System
+                        </Grid>
+                        <Grid item xs={6} className={classes.skills}>
+                        <StarIcon fontSize="small"/>
+                        <StarIcon fontSize="small"/>
+                        <StarIcon fontSize="small"/>
+                        <StarIcon fontSize="small"/>
+                        <StarIcon fontSize="small"/>
+                        </Grid>
+
+                    </Grid>
+                    <Grid container direction="row"
+                        justify="center"
+                        alignItems="center" spacing={3} >
+                        <Grid item xs={6} className={classes.skillsLabel}>
+                            Flask
+                        </Grid>
+                        <Grid item xs={6} className={classes.skills}>
+                        <StarIcon fontSize="small"/>
+                        <StarIcon fontSize="small"/>
+                        <StarIcon fontSize="small"/>
+                        <StarIcon fontSize="small"/>
+                        <StarBorderIcon fontSize="small"/>
+                        </Grid>
+
+                    </Grid>
+
+                    <Grid container direction="row"
+                        justify="center"
+                        alignItems="center" spacing={3} >
+                        <Grid item xs={6} className={classes.skillsLabel}>
+                            Pytorch
+                        </Grid>
+                        <Grid item xs={6} className={classes.skills}>
+                        <StarIcon fontSize="small"/>
+                        <StarIcon fontSize="small"/>
+                        <StarIcon fontSize="small"/>
+                        <StarBorderIcon fontSize="small"/>
+                        <StarBorderIcon fontSize="small"/>
+                        </Grid>
+
+                    </Grid>
+
+                    <Grid container direction="row"
+                        justify="center"
+                        alignItems="center" spacing={3} >
+                        <Grid item xs={6} className={classes.skillsLabel}>
+                            Data Visualisation with Plotly
+                        </Grid>
+                        <Grid item xs={6} className={classes.skills}>
+                        <StarIcon fontSize="small"/>
+                        <StarIcon fontSize="small"/>
+                        <StarIcon fontSize="small"/>
+                        <StarBorderIcon fontSize="small"/>
+                        <StarBorderIcon fontSize="small"/>
+                        </Grid>
+
+                    </Grid>
+                    <Grid container direction="row"
+                        justify="center"
+                        alignItems="center" spacing={3} >
+                        <Grid item xs={6} className={classes.skillsLabel}>
+                            Data Analytics
+                        </Grid>
+                        <Grid item xs={6} className={classes.skills}>
+                        <StarIcon fontSize="small"/>
+                        <StarIcon fontSize="small"/>
+                        <StarIcon fontSize="small"/>
+                        <StarBorderIcon fontSize="small"/>
+                        <StarBorderIcon fontSize="small"/>
+                        </Grid>
+
+                    </Grid>
             </div>
         )
     }
 }
+export default withStyles(useStyles)(Skills)
