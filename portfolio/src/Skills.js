@@ -8,18 +8,18 @@ import axios from 'axios';
 const useStyles = skill => ({
     skills: {
         textAlign: "center",
-        color: "#ea7800",
+        color: "#0095cf",
     },
     skillsLabel: {
         textAlign: "center",
-        color: "#a50369",
+        color: "#0095cf",
         fontWeight: 600
     },
     containerTabs: {
         margin: 20
     },
     skillsSection: {
-        color: "#8E8E89",
+        color: "#3f51b5",
         fontSize: 12,
         textAlign: "center",
         marginTop: 21,

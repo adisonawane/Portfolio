@@ -13,24 +13,22 @@ import Projects from "./Projects"
 import Contact from "./Contact"
 import About from "./About"
 const useStyles = theme => ({
-    root: {
-        flexGrow: 1,
-        width: '100%',
-        backgroundColor: theme.palette.background.paper,
-    },
+    
     tabsBar: {
-        color: '#f50057',
-        backgroundColor: '#fff',
+        color: '#71d7ff',
+        background: 'rgb(0,53,119)',
+background: 'radial-gradient(circle, rgba(0,41,91,1) 0%, rgba(6,0,1,1) 55%)',
         boxShadow: 'none',
+        padding:20
     },
     container: {
-        margin: 0,
         padding: 0
     },
     tabRoot: {
         minWidth: 10,
         fontSize: '0.7rem',
-        fontWeight: 500
+        fontWeight: 500,
+        padding:20
     },
 
     paper: {
@@ -120,12 +118,10 @@ class Main extends Component {
                     <Tabs
                         value={this.state.value}
                         onChange={handleChange}
-                        variant="scrollable"
                         scrollButtons="on"
                         indicatorColor="primary"
-                        textColor="primary"
-
-                        aria-label="scrollable force tabs example"
+                        textColor="primaryText"
+                        centered
                     >
                         <Tab label="About" classes={{ root: classes.tabRoot }} />
                         <Tab label="Skills" classes={{ root: classes.tabRoot }} />

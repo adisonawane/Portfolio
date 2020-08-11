@@ -9,7 +9,7 @@ function App() {
 
 
   return (
-    <div><Main></Main></div>
+    <div className="alignCenter"><Main></Main></div>
   );
 }
 
