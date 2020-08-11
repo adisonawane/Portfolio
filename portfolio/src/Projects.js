@@ -10,7 +10,7 @@ import Chip from '@material-ui/core/Chip';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
-
+import axios from 'axios'
 const useStyles = theme => ({
 
     root: {
@@ -62,14 +62,23 @@ class Projects extends Component {
         this.state = {
             project: null
         }
+    
+    }
 
+    componentDidMount() {
+        axios.get('https://us-central1-aditya-portfolio-6de9f.cloudfunctions.net/api/project').then((data) => {
+            console.log(data)
+            this.setState({
+                project: data.data
+            })
+        })
     }
     render() {
         const { classes } = this.props;
         return (
             <div>
-                {this.props.projects?this.props.projects.map(data=>
-                <div key={data.name} className={classes.root}>
+                {this.state.project?this.state.project.map(data=>
+                <div key={data.project_name} className={classes.root}>
 
                     <ExpansionPanel defaultExpanded>
                         <ExpansionPanelSummary
@@ -79,24 +88,16 @@ class Projects extends Component {
                         >
 
                             <div >
-                                <Typography className={classes.secondaryHeading} >{data.name}</Typography>
+                                <Typography className={classes.secondaryHeading} >{data.project_name}</Typography>
                             </div>
                         </ExpansionPanelSummary>
                         <ExpansionPanelDetails className={classes.details}>
 
-                            <div className={classes.column}>
-                                <span className={classes.chipsRoot}>
-                                    {data.technologies.map(technology =>
-
-                                        <Chip key={technology} color="primary" label={technology} />
-                                    )}
-                                </span>
-
-                            </div>
+                           
                             <div className={classes.helper}>
                                 <Typography variant="caption">
                                     <List >
-                                        {data.desc.map(descData =>
+                                        {data.project_desc.map(descData =>
                                             <ListItem key={descData}>
                                                 <ListItemText secondary={descData} />
                                             </ListItem>)}

@@ -133,7 +133,7 @@ class Main extends Component {
                         <Tab label="Projects" classes={{ root: classes.tabRoot }} />
                         <Tab label="Contact Information" classes={{ root: classes.tabRoot }} />
 
-                        <Tab label="About Me" classes={{ root: classes.tabRoot }} />
+                        
                     </Tabs>
                 </AppBar>
                 <Container className={classes.container}>
@@ -141,7 +141,6 @@ class Main extends Component {
                     <div ref={this.skills}><Skills /></div>
                     <div ref={this.projects}><Projects/></div> 
                     <div ref={this.contact}><Contact /></div>
-                    <div ref={this.about}><About/></div>
                 </Container>
 
 
