@@ -38,6 +38,24 @@ const getSkills=(req,res)=>{
     });
   };
   app.get('/getSkills',getSkills);
+  
+
+  const project =(request,respond) =>{
+    db.collection('projects').get().then((data) =>{
+      let array=[]
+      data.forEach(props =>{
+        array.push({
+          project_name: props.data().name,
+          project_desc: props.data().desc
+        })
+      })
+      return respond.json(array)
+    }).catch(err =>{
+      console.log(err)
+      respond.json({'response_code':"error","msg":"server error","code":err.code})
+    })
+  }
+  app.get('/project',project)
   exports.api = functions.https.onRequest(app);
 
 // const getBackEndDev= (request,respond) =>{
