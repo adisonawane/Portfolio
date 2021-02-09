@@ -13,7 +13,10 @@ const useStyles = skill => ({
     skillsLabel: {
         textAlign: "center",
         color: "#0095cf",
-        fontWeight: 600
+        fontWeight: 600,
+        paddingBottom:'10%',
+        fontSize:'1rem',
+        wordBreak:'break-word'
     },
     containerTabs: {
         margin: 20
@@ -25,6 +28,12 @@ const useStyles = skill => ({
         marginTop: 21,
         marginBottom: 21
     },
+    skillName:{
+        fontSize:'1.2rem',
+        fontWeight:'700',
+        color:'#427ab1',
+        padding:'60% 0% 20% 0%'
+    }
 })
 
 class Skills extends Component {
@@ -46,215 +55,29 @@ class Skills extends Component {
         const { classes } = this.props
         return (
             <div className={classes.containerTabs}>
-                
-
-                {this.state.skills ?
-                    this.state.skills.map((data_row,j) => 
-                    <div key={j}>
-                    <Grid container direction="row"
-                    justify="center"
-                    alignItems="center" spacing={0} >
-                    <Grid item xs={4} >
-                        <Divider variant="middle" />
-                    </Grid>
-                    <Grid item xs={4} className={classes.skillsSection}>
-                        {data_row.skill}
-                        </Grid>
-                    <Grid item xs={4} >
-                        <Divider variant="middle" />
-                    </Grid>
-
-                </Grid>
-                {data_row.value.map((data,j)=>
-                    <Grid container key={j} direction="row"
-                    justify="center"
-                    alignItems="center" spacing={3} >
-                    <Grid item xs={6} className={classes.skillsLabel}>
-                        {data.name}
-                    </Grid>
-                    <Grid item xs={6} className={classes.skills}>
-                        {[...Array(data.stars)].map((data,i) => <StarIcon key={i} fontSize="small" />)}
-                        {[...Array(5-data.stars)].map((data,k) => <StarBorderIcon key={k} fontSize="small" />)}
-
-                    </Grid>
-
-                    </Grid>
-
-                )}
-                   </div>)
-                    : <div>None</div>}
-
-
-                {/* <Grid container direction="row"
-                    justify="center"
-                    alignItems="center" spacing={0} >
-                    <Grid item xs={4} >
-                        <Divider variant="middle" />
-                    </Grid>
-                    <Grid item xs={4} className={classes.skillsSection}>
-                        Back End Development
-                        </Grid>
-                    <Grid item xs={4} >
-                        <Divider variant="middle" />
-                    </Grid>
-
-                </Grid>
-
-
                 <Grid container direction="row"
                     justify="center"
-                    alignItems="center" spacing={3} >
-                    <Grid item xs={6} className={classes.skillsLabel}>
-                        Firebase
-                        </Grid>
-                    <Grid item xs={6} className={classes.skills}>
-                        <StarIcon fontSize="small" />
-                        <StarIcon fontSize="small" />
-                        <StarIcon fontSize="small" />
-                        <StarIcon fontSize="small" />
-                        <StarBorderIcon fontSize="small" />
-                    </Grid>
-
+                    alignItems="flex-start" spacing={0}  >
+                    {this.state.skills ? this.state.skills.map((data_row, j) =>
+                            <Grid item xs={6} sm={3} className={classes.skillsSection} key={j}>
+                                <div className={classes.skillName}>{data_row.skill}</div>
+                                
+                                {data_row.value.map((data, j) =>
+                                    <Grid container key={j} direction="row"
+                                        justify="center"
+                                        alignItems="center" spacing={3} >
+                                        <Grid item xs={12} className={classes.skillsLabel}>
+                                            {data.name}
+                                        </Grid>
+                                    </Grid>
+                                )}
+                            </Grid>
+               
+            )
+                    : <div>None</div>
+                }
                 </Grid>
-                <Grid container direction="row"
-                    justify="center"
-                    alignItems="center" spacing={3} >
-                    <Grid item xs={6} className={classes.skillsLabel}>
-                        C# MVC
-                        </Grid>
-                    <Grid item xs={6} className={classes.skills}>
-                        <StarIcon fontSize="small" />
-                        <StarIcon fontSize="small" />
-                        <StarIcon fontSize="small" />
-                        <StarIcon fontSize="small" />
-                        <StarBorderIcon fontSize="small" />
-                    </Grid>
-
-                </Grid>
-                <Grid container direction="row"
-                    justify="center"
-                    alignItems="center" spacing={3} >
-                    <Grid item xs={6} className={classes.skillsLabel}>
-                        SQL
-                        </Grid>
-                    <Grid item xs={6} className={classes.skills}>
-                        <StarIcon fontSize="small" />
-                        <StarIcon fontSize="small" />
-                        <StarIcon fontSize="small" />
-                        <StarBorderIcon fontSize="small" />
-                        <StarBorderIcon fontSize="small" />
-                    </Grid>
-
-                </Grid>
-
-                <Grid container direction="row"
-                    justify="center"
-                    alignItems="center" spacing={0} >
-                    <Grid item xs={4} >
-                        <Divider variant="middle" />
-                    </Grid>
-                    <Grid item xs={4} className={classes.skillsSection}>
-                        Artificial Intelligence
-                        </Grid>
-                    <Grid item xs={4} >
-                        <Divider variant="middle" />
-                    </Grid>
-
-                </Grid>
-
-                <Grid container direction="row"
-                    justify="center"
-                    alignItems="center" spacing={3} >
-                    <Grid item xs={6} className={classes.skillsLabel}>
-                        Python for AI
-                        </Grid>
-                    <Grid item xs={6} className={classes.skills}>
-                        <StarIcon fontSize="small" />
-                        <StarIcon fontSize="small" />
-                        <StarIcon fontSize="small" />
-                        <StarIcon fontSize="small" />
-                        <StarIcon fontSize="small" />
-                    </Grid>
-
-                </Grid>
-                <Grid container direction="row"
-                    justify="center"
-                    alignItems="center" spacing={3} >
-                    <Grid item xs={6} className={classes.skillsLabel}>
-                        Robot Operating System
-                        </Grid>
-                    <Grid item xs={6} className={classes.skills}>
-                        <StarIcon fontSize="small" />
-                        <StarIcon fontSize="small" />
-                        <StarIcon fontSize="small" />
-                        <StarIcon fontSize="small" />
-                        <StarIcon fontSize="small" />
-                    </Grid>
-
-                </Grid>
-                <Grid container direction="row"
-                    justify="center"
-                    alignItems="center" spacing={3} >
-                    <Grid item xs={6} className={classes.skillsLabel}>
-                        Flask
-                        </Grid>
-                    <Grid item xs={6} className={classes.skills}>
-                        <StarIcon fontSize="small" />
-                        <StarIcon fontSize="small" />
-                        <StarIcon fontSize="small" />
-                        <StarIcon fontSize="small" />
-                        <StarBorderIcon fontSize="small" />
-                    </Grid>
-
-                </Grid>
-
-                <Grid container direction="row"
-                    justify="center"
-                    alignItems="center" spacing={3} >
-                    <Grid item xs={6} className={classes.skillsLabel}>
-                        Pytorch
-                        </Grid>
-                    <Grid item xs={6} className={classes.skills}>
-                        <StarIcon fontSize="small" />
-                        <StarIcon fontSize="small" />
-                        <StarIcon fontSize="small" />
-                        <StarBorderIcon fontSize="small" />
-                        <StarBorderIcon fontSize="small" />
-                    </Grid>
-
-                </Grid>
-
-                <Grid container direction="row"
-                    justify="center"
-                    alignItems="center" spacing={3} >
-                    <Grid item xs={6} className={classes.skillsLabel}>
-                        Data Visualisation with Plotly
-                        </Grid>
-                    <Grid item xs={6} className={classes.skills}>
-                        <StarIcon fontSize="small" />
-                        <StarIcon fontSize="small" />
-                        <StarIcon fontSize="small" />
-                        <StarBorderIcon fontSize="small" />
-                        <StarBorderIcon fontSize="small" />
-                    </Grid>
-
-                </Grid>
-                <Grid container direction="row"
-                    justify="center"
-                    alignItems="center" spacing={3} >
-                    <Grid item xs={6} className={classes.skillsLabel}>
-                        Data Analytics
-                        </Grid>
-                    <Grid item xs={6} className={classes.skills}>
-                        <StarIcon fontSize="small" />
-                        <StarIcon fontSize="small" />
-                        <StarIcon fontSize="small" />
-                        <StarBorderIcon fontSize="small" />
-                        <StarBorderIcon fontSize="small" />
-                    </Grid>
-
-                </Grid> */}
-            </div>
+            </div >
         )
     }
 }

@@ -119,8 +119,9 @@
                     "starIcon": 3,
                     "name": "HTML,CSS"
                 }
-            ],
-            "Tools": [
+            ],{
+            "name":"Tools",
+            "value": [
                 {
                     "starIcon": 4,
                     "name": "Tableau"
@@ -149,7 +150,9 @@
                     "name": "SAP Business Object",
                     "starIcon": 4
                 }
+            }
             ]
         }
+    
     }
 ]

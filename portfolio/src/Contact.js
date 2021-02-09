@@ -9,9 +9,10 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import MailIcon from '@material-ui/icons/Mail';
 const useStyles = theme => ({
     root: {
-        flexGrow: 1,
-        width: '100%',
-        backgroundColor: theme.palette.background.paper,
+        padding:'10% 0%',
+        backgroundColor: '#152336',
+        maxWidth: '100%',
+        marginTop: '10%'    
     },
     tabsBar: {
         color: '#f50057',
@@ -23,9 +24,7 @@ const useStyles = theme => ({
         padding: 0
     },
     tabRoot: {
-        minWidth: 10,
-        fontSize: '0.7rem',
-        fontWeight: 500
+        color: '#fff',
     },
 
     paper: {
@@ -47,14 +46,14 @@ const useStyles = theme => ({
     },
     skillsLabel:{
         textAlign: 'center',
-          color:'#a50369',
+          color:'#fff',
           fontWeight:600
       },
       containerTabs:{
           margin:20
       },
       contactSection:{
-        color:'#8E8E89',
+        color:'#fff',
         fontSize:12,
         textAlign:'center',
         fontWeight:400,
@@ -68,30 +67,31 @@ export default withStyles(useStyles)(class Contact extends Component {
     render() {
         const {classes} = this.props;
         return (
-            <Container>
+            <Container className={classes.root}>
                 <div className={classes.containerTabs}>
                     <Grid container direction="row"
                         justify="center"
                         alignItems="center" spacing={3} >
-                        <Grid item xs={12} className={classes.skillsLabel}>
+                        
+                        <Grid item xs={4} className={classes.skillsLabel}>
+                            <Link href="https://github.com/adisonawane" >
+
+                                <div><GitHubIcon fontSize="large" className={classes.tabRoot}/></div>
+                                <div className={classes.contactSection}>Checkout my projects on Github</div>
+                            </Link>
+                        </Grid>
+                        <Grid item xs={4} className={classes.skillsLabel}>
                             <Link href="https://www.linkedin.com/in/adityasonawane/" >
 
-                                <div><LinkedInIcon fontSize="large" /></div>
+                                <div><LinkedInIcon fontSize="large" className={classes.tabRoot} /></div>
                                 <div className={classes.contactSection}>Connect on LinkedIn!</div>
 
                             </Link>
                         </Grid>
-                        <Grid item xs={12} className={classes.skillsLabel}>
-                            <Link href="https://github.com/adisonawane" >
-
-                                <div><GitHubIcon fontSize="large" /></div>
-                                <div className={classes.contactSection}>Checkout my projects on Github</div>
-                            </Link>
-                        </Grid>
-                        <Grid item xs={12} className={classes.skillsLabel}>
+                        <Grid item xs={4} className={classes.skillsLabel}>
                             <Link href="mailto:adityasonawane0194@gmail.com?" >
 
-                                <div><MailIcon fontSize="large" /></div>
+                                <div><MailIcon fontSize="large" className={classes.tabRoot}/></div>
                                 <div className={classes.contactSection}>Have  queries? Feel free to mail!</div>
                             </Link>
                         </Grid>
